@@ -1,6 +1,6 @@
 # MCx32_Enhance
 
-This is a small project to convert Minecraft 16x textures to 32x textures. The use case: I found a texture pack that I really like in 32x called [Conquest](https://conquestreforged.com/).
+This is a small project to convert Minecraft 16x textures to 32x textures. The use case: I found a texture pack that I really like in 32x called [Conquest](https://conquestreforged.com/conquest-pack).
 There's a mod called [tetra](https://github.com/mickelus/tetra) that lets you reconfigure weapons
 and tools.
 
