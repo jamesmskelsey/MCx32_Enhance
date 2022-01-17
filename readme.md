@@ -15,13 +15,13 @@ Step two is much more manual. Cut part of another texture out and plop it down o
 
 ---
 
-Upsize a supplied texture from 16x to 32x, resample so that the image is basically the same.
+~~Upsize a supplied texture from 16x to 32x, resample so that the image is basically the same.~~
 
 ### Release 2:
 
 ---
 
-Upsize all of the images in a folder, and all the subfolders.
+~~Upsize all of the images in a folder, and all the subfolders.~~
 
 ### Release 3:
 
