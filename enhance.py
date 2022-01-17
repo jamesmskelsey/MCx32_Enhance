@@ -5,8 +5,9 @@ import sys
 
 
 class Enhance:
-    def __init__(self, walk):
+    def __init__(self, walk=False, verbose=False):
         self.walk = walk
+        self.verbose = verbose
         pass
 
     def resize_and_save(self, filename):
@@ -15,6 +16,8 @@ class Enhance:
         is16x = im.size == x16
         if is16x:
             # double the image in size to 32 by 32
+            if self.verbose:
+                print(f"Resizing {filename}")
             out = scale(im, 2)
             # save it as the original name
             out.save(f"{filename}", "PNG")
@@ -30,7 +33,6 @@ class Enhance:
     def do_resize(self):
         if walk:
             data = os.walk(os.getcwd())
-            print("Found these files to modify: ")
             for root, dirs, files in data:
                 # separate out the files, dirs, root
                 files = [f for f in files if not f[0] == '.']
@@ -39,14 +41,13 @@ class Enhance:
 
                 # now we can use them - we'll need to modify the images while
                 # we're in the folder
-                print(root, dirs, files)
                 for file in files:
                     filename = f"{root}\{file}"
                     self.resize_and_save(filename)
 
         else:
             # get the files in the cwd, resize and save each one
-            files = get_files()
+            files = self.get_files()
             for file in files:
                 self.resize_and_save(file)
 
@@ -54,3 +55,7 @@ class Enhance:
 if __name__ == "__main__":
     # All folders/files?
     walk = "-w" in sys.argv
+    verbose = "-v" in sys.argv
+
+    enh = Enhance(walk, verbose)
+    enh.do_resize()
