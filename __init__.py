@@ -1,1 +1,1 @@
-from enhance_mc32x.enhance import Enhance
+from MCx32_Enhance.enhance import Enhance
