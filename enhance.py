@@ -31,7 +31,7 @@ class Enhance:
         return files
 
     def do_resize(self):
-        if walk:
+        if self.walk:
             data = os.walk(os.getcwd())
             for root, dirs, files in data:
                 # separate out the files, dirs, root
